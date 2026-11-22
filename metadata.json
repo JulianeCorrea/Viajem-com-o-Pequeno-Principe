@@ -1,0 +1,6 @@
+{
+  "name": "O Pequeno Príncipe — Viagem Pelos Asteroides",
+  "description": "Uma jornada espacial poética e interativa pelos oito astros inspirada na obra de Antoine de Saint-Exupéry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

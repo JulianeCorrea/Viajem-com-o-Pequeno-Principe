@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #060a17;
+    color: #f4efe6;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  blockquote {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Subtle paper watercolor grain overlay using inline SVG noise */
+.watercolor-paper-grain {
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(36, 53, 108, 0.28) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(232, 196, 104, 0.08) 0%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 50% 85%,
+      rgba(25, 38, 84, 0.35) 0%,
+      transparent 60%
+    );
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes shimmerSoft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-shimmer-soft {
+  animation: shimmerSoft 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-shimmer-soft {
+    animation: none !important;
+  }
+}
